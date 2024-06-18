@@ -1,51 +1,50 @@
-YouTube Video Downloader
-A simple Python script to download YouTube videos using the pytube library and a GUI for selecting the download directory.
+# YouTube Video Downloader
 
-Requirements
-Python 3.x
-pytube
-tkinter
-certifi
-Installation
-Clone the repository:
+This Python script allows you to download YouTube videos using `pytube` library with a GUI for selecting the download directory.
 
-sh
-Copy code
-git clone https://github.com/yourusername/Youtube_video_downloader.git
-cd Youtube_video_downloader
-Create and activate a virtual environment:
+## Requirements
 
-sh
-Copy code
-python3 -m venv myenv
-source myenv/bin/activate
-Install the required packages:
+- Python 3.x
+- `pytube`
+- `tkinter`
+- `certifi`
 
-sh
-Copy code
-pip install pytube certifi
-Usage
-Run the script:
+## Installation
 
-sh
-Copy code
-python youtube_video_downloader.py
-Enter the YouTube video URL when prompted.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/Youtube_video_downloader.git
+   
+   cd Youtube_video_downloader
 
-Select the folder to save the video through the file dialog.
+2. Create and activate a virtual environment (optional but recommended):
+   ```
+   python3 -m venv myenv
 
-Functions
-download_video(url, save_path)
+   source myenv/bin/activater
 
-Downloads the YouTube video at the given URL and saves it to the specified directory.
-Filters streams for progressive download and MP4 format.
-Selects the highest resolution stream available.
-open_file_dialog()
+3. Install packages:
+   ```
+   pip install pytube certifi
 
-Opens a dialog for selecting a directory.
-Returns the selected directory path.
-SSL Configuration
-Why ssl and certifi are used
-Some systems may encounter SSL certificate verification issues.
-ssl._create_default_https_context = ssl._create_unverified_context disables SSL verification for the script to run without errors.
-certifi provides Mozilla's CA Bundle, ensuring the script uses up-to-date and reliable certificates.
+
+
+## Usage
+
+### Run the script:
+  ```
+  python youtube_video_downloader.py
+  ```
+
+1. Enter the YouTube video URL when prompted.
+2. Select the folder to save the video through the file dialog.
+
+## Functions
+```download_video(url, save_path)```
+Downloads the YouTube video at the given URL and saves it to the specified directory. Filters streams for progressive download and MP4 format. Selects the highest resolution stream available.
+
+```open_file_dialog()```
+Opens a dialog for selecting a directory. Returns the selected directory path.
+
+```SSL Configuration```
+ssl._create_default_https_context = ssl._create_unverified_context disables SSL verification for the script to run without errors. certifi provides Mozilla's CA Bundle, ensuring the script uses up-to-date and reliable certificates.
